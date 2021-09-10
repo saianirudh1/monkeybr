@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 :root {
   --bg-color: #323437;
@@ -12,7 +12,7 @@
   --colorful-error-extra-color: #7e2a33;
 
   --roundness: 0.5rem;
-  --font: "Roboto Mono";
+  --font: 'Roboto Mono';
   --scroll-padding-top: 2rem;
 }
 
