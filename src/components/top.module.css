@@ -1,0 +1,120 @@
+/* Top Container */
+.top {
+  display: grid;
+  line-height: 2.3rem;
+  font-size: 2.3rem;
+  padding: 0 5px;
+  grid-auto-flow: column;
+  grid-template-areas: 'logo menu config';
+  grid-template-columns: 1fr 2fr 1fr;
+  z-index: 2;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+/* Logo Styles */
+.top .logo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.top .logo .icon {
+  position: relative;
+  font-size: 1.5rem;
+  font-family: 'lexend deca';
+  margin-bottom: 0.4rem;
+  width: fit-content;
+  display: grid;
+  align-items: center;
+  padding: 0.15rem;
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  border: 0.25px solid var(--main-color);
+  border-radius: var(--roundness);
+}
+
+.top .logo .text {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  font-family: 'lexend deca';
+  transition: all 0.25s ease;
+}
+
+/* Menu Styles */
+.menu {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: var(--sub-color);
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.5rem;
+  max-width: fit-content;
+}
+
+.menu .icon-button {
+  display: grid;
+  grid-auto-flow: column;
+  align-content: center;
+  transition: all 0.25s ease;
+  padding: 0.5rem;
+  margin-bottom: 0.4rem;
+  border-radius: var(--roundness);
+  cursor: pointer;
+}
+
+.menu .icon-button .menu-icon {
+  font-size: 1.25rem;
+  display: grid;
+  place-items: center;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+.menu-icon:hover {
+  color: var(--text-color);
+  transform: scale(1.005);
+}
+
+/* Config Styles */
+.config {
+  grid-area: 'config';
+  justify-self: right;
+  display: grid;
+  grid-template-rows: 0.7rem 0.7rem 0.7em;
+  grid-gap: 0.2rem;
+  transition: all 0.25s ease;
+  justify-items: self-end;
+}
+
+.config .group {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: inherit;
+}
+
+.button {
+  font-size: 0.75rem;
+  background: none;
+  border: none;
+  width: max-content;
+  height: max-content;
+  padding: 0;
+  cursor: pointer;
+  color: var(--sub-color);
+  font-family: 'lexend deca';
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  color: var(--text-color);
+}
+
+.selected {
+  opacity: 1;
+  color: var(--main-color);
+}
