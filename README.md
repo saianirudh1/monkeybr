@@ -1,3 +1,3 @@
 # monkeybr
 
-A typing web app which is inspired from monkeytype and keybr
+A Typing Website which is inspired from monkeytype and keybr

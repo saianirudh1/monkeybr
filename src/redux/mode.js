@@ -3,10 +3,11 @@ import { NUMBERS, PUNCTUATION, TIME, TIME_MODE_OPTIONS } from '../constants';
 
 const initialState = {
   currMode: TIME,
-  currOption: TIME_MODE_OPTIONS[0],
+  currOption: TIME_MODE_OPTIONS[1],
   allOptions: TIME_MODE_OPTIONS,
   punctuation: false,
   numbers: false,
+  difficulty: 'english',
 };
 
 const modeSlice = createSlice({
@@ -16,7 +17,7 @@ const modeSlice = createSlice({
     changeMode(state, action) {
       state.currMode = action.payload.currMode;
       state.allOptions = action.payload.currOptions;
-      state.currOption = action.payload.currOptions[0];
+      state.currOption = action.payload.currOptions[1];
     },
 
     changeOption(state, action) {

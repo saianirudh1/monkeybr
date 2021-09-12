@@ -1,5 +1,4 @@
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { modeActions } from '../redux/mode';
 
@@ -10,15 +9,24 @@ function Top() {
   const dispatch = useDispatch();
   const mode = useSelector((state) => state.mode);
 
+  /**
+   * @summary: Dispatch the toggle Type action
+   */
   const toggleType = function (e) {
     dispatch(modeActions.toggleType(e.target.textContent));
   };
 
+  /**
+   * @summary: Dispatch the toggle Mode action
+   */
   const toggleMode = function (e) {
     let selectedMode = TIME === e.target.textContent ? TIME_MODE : WORDS_MODE;
     dispatch(modeActions.changeMode(selectedMode));
   };
 
+  /**
+   * @summary: Dispatch the toggle Option action
+   */
   const toggleOption = function (e) {
     dispatch(modeActions.changeOption(+e.target.textContent));
   };
@@ -34,6 +42,7 @@ function Top() {
       {option}
     </button>
   ));
+
   return (
     <div className={classes.top}>
       <div className={classes.logo}>

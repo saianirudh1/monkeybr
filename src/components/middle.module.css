@@ -1,0 +1,78 @@
+.page {
+  position: relative;
+}
+
+/* Caps Lock Styles */
+.caps {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  font-weight: 300;
+  font-size: 1.25rem;
+  display: table;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  padding: 1rem;
+  border-radius: var(--roundness);
+  transition: all 0.25s ease;
+  z-index: 999;
+  pointer-events: none;
+  display: flex;
+}
+
+.caps p {
+  margin: 0 1rem;
+}
+
+/* Input Styles */
+.word-input {
+  height: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  display: block;
+}
+
+/* Indicator Styles */
+.indicators {
+  height: 0;
+  margin-left: 0.37rem;
+  display: flex;
+  margin-top: -2rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  position: absolute;
+  color: var(--main-color);
+}
+
+.indicator {
+  margin-right: 2rem;
+}
+
+/* Words Styles */
+.words-container {
+  position: relative;
+}
+
+.caret {
+  height: 1.5rem;
+  width: 2px;
+  background-color: var(--caret-color);
+  position: absolute;
+  border-radius: var(--roundness);
+  transform: scale(1.45);
+  transform-origin: top left;
+  transition: all 0.25s ease;
+}
+
+.words {
+  height: 9.5rem;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: flex-start;
+  user-select: none;
+  padding-bottom: 1em;
+}
